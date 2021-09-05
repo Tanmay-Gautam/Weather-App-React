@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  // height: 100vh;
+  color: #000000c2;
+}
+
+.App {
+  background: linear-gradient(#836273, #373252);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.WeatherCard {
+  position: relative;
+  border-radius: 15px;
+  height: 550px;
+  width: 400px;
+  &-topBar {
+    // background-color: violet;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        font-weight: bolder;
+        font-family: cursive;
+        padding-top: 0.5em;
+      }
+      h1 {
+        height: 1em;
+        margin: 0;
+        font-size: 2.5em;
+      }
+    }
+  }
+  &-mainContent {
+    text-align: center;
+    margin-top: 2.5em;
+    // background-color: blue;
+
+    &-details {
+      h2 {
+        margin: 0;
+        font-size: x-large;
+        font-weight: 100;
+      }
+      p {
+        margin: 0;
+        font-weight: 100;
+        opacity: 80%;
+      }
+      margin-bottom: 1em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 4em;
+      font-family: "Merriweather Sans", sans-serif;
+      // font-weight: 400 !important;
+      // font-size: xx-large;
+    }
+    sup {
+      font-size: 50%;
+    }
+  }
+}
+
+.dotted-line {
+  border-bottom: 5px dotted #272727 !important;
+  width: 60%;
+  margin: auto;
+  margin-top: 1em;
+}
+
+.updateBtn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  background: #e7e7e7;
+  padding: 0.2em;
+  font-size: 3em;
+  box-shadow: 0px 0px 15px 0px #404040;
+  &:active {
+    box-shadow: 0px 0px 15px 0px #404040;
+    background: #e5e5e5;
+    // box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #404040;
+    outline: none;
+  }
+}
+
+.sunRiseSet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0em 5em;
+}
+
+.weatherIconTag {
+  img {
+    height: 75px;
+    width: 75px;
+  }
+  h3 {
+    margin: auto;
+    margin-top: -1.5em;
+  }
+}
+
+// @media only screen and (width: 425px) {
+//     .WeatherCard{
+//         height: 100vh;
+//         width: 100vw;
+//         border-radius: 0;
+//     }
+// }
