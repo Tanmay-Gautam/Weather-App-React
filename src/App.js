@@ -79,6 +79,7 @@ export default class App extends Component {
               background: is_day ? "url(" + day + ")" : "url(" + night + ")",
               color: is_day ? "" : "white",
             }}
+            id="WeatherCard"
           >
             <div className="WeatherCard-topBar">
               <div>
