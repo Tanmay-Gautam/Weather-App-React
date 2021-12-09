@@ -4,7 +4,9 @@ import { WiCloud, WiHumidity, WiWindy } from "react-icons/wi";
 import { FiSunrise, FiSunset } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
 import day from "./images/day.png";
+import dayWebp from "./images/day.webp";
 import night from "./images/night.png";
+import nightWebp from "./images/night.webp";
 
 export default class App extends Component {
   constructor() {
@@ -76,6 +78,8 @@ export default class App extends Component {
           <div
             className="WeatherCard"
             style={{
+              // try to use background-image dayWebp/nightWebp if error then fallback to day/night
+              backgroundImage: `url(${is_day ? dayWebp : nightWebp})`,
               background: is_day ? "url(" + day + ")" : "url(" + night + ")",
               color: is_day ? "" : "white",
             }}
